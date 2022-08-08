@@ -15,11 +15,11 @@ const fruits = [
   ];
   
   // EKSEMPEL 1
-  // const mappedFruitsTwo = fruits.map((e) => {
-  //   let = randomLetter = Math.floor(Math.random() * e.length)
-  //   return e[randomLetter].toUpperCase()
-  // });
-    // console.log(mappedFruitsTwo)
+  const mappedFruitsTwo = fruits.map((e) => {
+    let = randomLetter = Math.floor(Math.random() * e.length)
+    return e[randomLetter].toUpperCase()
+  });
+    console.log(mappedFruitsTwo)
   
   // This should log something like this:
   
@@ -66,11 +66,11 @@ const people = [
   // the hobby in the sentence should be a randomly chosen one from the hobby array.
   // HINT: Use Template Literals (Google it if unsure)
    
-  // const mappedPeople = people.map((e) => {
-  //   return `${e.name} is a ${e.age} year old ${e.male ? "man, and he" : "woman, and she"} likes ${e.hobbies[Math.floor(Math.random() * e.hobbies.length)]} among other things.`
-  // });
+  const mappedPeople = people.map((e) => {
+    return `${e.name} is a ${e.age} year old ${e.male ? "man, and he" : "woman, and she"} likes ${e.hobbies[Math.floor(Math.random() * e.hobbies.length)]} among other things.`
+  });
 
-  // console.log(mappedPeople);
+  console.log(mappedPeople);
   
   // This should log something like this:
    
@@ -87,11 +87,11 @@ const people = [
 // If/else - ONLY, and need both.
 const numArray = [32, 11, 4, 67, 97, 61, 52, 12, 26, 8, 70, 23];
  
-// const mappedArray = numArray.map((e) => {
-//   return e > 50 ? e * 5 : e * 10
-// });
+const mappedArray = numArray.map((e) => {
+  return e > 50 ? e * 5 : e * 10
+});
 
-// console.log(mappedArray);
+console.log(mappedArray);
  
 //fullfør .map method funksjonen:
 //hvis tallet er over 50, return tallet ganget med 5,
@@ -183,11 +183,11 @@ const people1 = [
 // Complete the .filter method to filter out only the objects that have an age from
 // (and including) 26 to (and including) 28 and at least 3 hobbies
  
-// const filteredPeople = people1.filter((e) => {
-//   return e.age >= 26 && e.age <= 28 && e.hobbies.length >= 3;
-// });
+const filteredPeople = people1.filter((e) => {
+  return e.age >= 26 && e.age <= 28 && e.hobbies.length >= 3;
+});
  
-// console.log(filteredPeople);
+console.log(filteredPeople);
  
 //this should log:
 // (3) [{…}, {…}, {…}]
@@ -200,11 +200,11 @@ const people1 = [
  
 //Filter out the objects who are male and have a name of exactly 6 characters
  
-// const filteredPeople2 = people1.filter((e) => {
-//   return e.male && e.name.length === 6
-// });
+const filteredPeople2 = people1.filter((e) => {
+  return e.male && e.name.length === 6
+});
  
-// console.log(filteredPeople2);
+console.log(filteredPeople2);
  
 //this should log:
 // (3) [{…}, {…}, {…}]
@@ -217,11 +217,11 @@ const people1 = [
  
 //Filter out the objects that have "gym" included in their hobbies
  
-// const filteredPeople3 = people1.filter((e) => {
-//   return e.hobbies.includes("gym")
-// });
+const filteredPeople3 = people1.filter((e) => {
+  return e.hobbies.includes("gym")
+});
  
-// console.log(filteredPeople3);
+console.log(filteredPeople3);
  
 //this should log:
 // (2) [{…}, {…}]
@@ -316,31 +316,31 @@ const hobbies = [
 
 // ======= HINTS =======
 
-// people[0].cool = true
+people[0].cool = true
 // Array med objekt inni - objekt blir et element i arrayet
 
-// let cleanedHobbiesSet = new Set();
-// hobbies.forEach((e) => {
-//   cleanedHobbiesSet.add(e.toLowerCase())
-// });
-// let cleanedHobbiesArray = [...cleanedHobbiesSet]; 
+let cleanedHobbiesSet = new Set();
+hobbies.forEach((e) => {
+  cleanedHobbiesSet.add(e.toLowerCase())
+});
+let cleanedHobbiesArray = [...cleanedHobbiesSet]; 
 // "Spread-syntax": Spread syntax can be used when all elements from an object or array need to be included in a list of some kind.
 
-// let personObjectArray = [];
-// names.forEach((name) => {
-//   let personObject = {}
-//   personObject.name = name
-//   personObject.age = Math.floor(Math.random() * 32 + 18)
-//   personObject.hobbies = []
-//   while (personObject.hobbies.length < 3) {
-//     let randomHobby = cleanedHobbiesArray[Math.floor(Math.random() * cleanedHobbiesArray.length)]
-//     if (!personObject.hobbies.includes(randomHobby)) {
-//       personObject.hobbies.push(randomHobby)
-//     }
-//   }
-//   personObjectArray.push(personObject)
-// });
-// console.log(personObjectArray);
+let personObjectArray = [];
+names.forEach((name) => {
+  let personObject = {}
+  personObject.name = name
+  personObject.age = Math.floor(Math.random() * 32 + 18)
+  personObject.hobbies = []
+  while (personObject.hobbies.length < 3) {
+    let randomHobby = cleanedHobbiesArray[Math.floor(Math.random() * cleanedHobbiesArray.length)]
+    if (!personObject.hobbies.includes(randomHobby)) {
+      personObject.hobbies.push(randomHobby)
+    }
+  }
+  personObjectArray.push(personObject)
+});
+console.log(personObjectArray);
 
 
 
@@ -414,17 +414,17 @@ const people3 = [
 
 // Complete the .sort() to sort the people object array by age, from highest to lowest age:
 
-// let sortedPeople1 = people3.sort(function(a, b) {
-//   if (a.age < b.age) {return 1;}
-//   if (a.age > b.age) {return -1;}
-// });
+let sortedPeople1 = people3.sort(function(a, b) {
+  if (a.age < b.age) {return 1;}
+  if (a.age > b.age) {return -1;}
+});
 
 // OR SHORTER VERSION //
 
-// let sortedPeople1 = people3.sort((a, b) => {
-//   return b.age - a.age;
-// });
-// console.log(sortedPeople1);
+let sortedPeople1 = people3.sort((a, b) => {
+  return b.age - a.age;
+});
+console.log(sortedPeople1);
 
 // the console log should read:
 // 0: {name: 'Herman', male: true, age: 31, hobbies: Array(2)}
@@ -438,17 +438,17 @@ const people3 = [
 
 // Complete the .sort() to sort the people object array by name length, from shortest to longest:
 
-// let sortedPeople2 = people3.sort(function(a, b) {
-//   if (a.name.length < b.name.length) {return -1;}
-//   if (a.name.length > b.name.length) {return 1}
-// });
+let sortedPeople2 = people3.sort(function(a, b) {
+  if (a.name.length < b.name.length) {return -1;}
+  if (a.name.length > b.name.length) {return 1}
+});
 
 // OR SHORTER VERSION //
 
-// let sortedPeople2 = people3.sort((a, b) => {
-//   return a.name.length - b.name.length;
-// });
-// console.log(sortedPeople2);
+let sortedPeople2 = people3.sort((a, b) => {
+  return a.name.length - b.name.length;
+});
+console.log(sortedPeople2);
 
 // the console log should read:
 // 0: {name: 'Avery', male: true, age: 28, hobbies: Array(4)}
@@ -463,13 +463,13 @@ const people3 = [
 // Complete the .sort() to sort the people object array by amount of hobbies from fewest to most, and
 // make ties sorted by name, alphabetically from a-z (this can be accomplished with just 1 sort method)
 
-// let sortedPeople3 = people3.sort((a, b) => {
-//   if (a.hobbies.length > b.hobbies.length) return 1;
-//   if (a.hobbies.length < b.hobbies.length) return -1;
-//   if (a.name > b.name) return 1;
-//   if (a.name < b.name) return -1;
-// });
-// console.log(sortedPeople3);
+let sortedPeople3 = people3.sort((a, b) => {
+  if (a.hobbies.length > b.hobbies.length) return 1;
+  if (a.hobbies.length < b.hobbies.length) return -1;
+  if (a.name > b.name) return 1;
+  if (a.name < b.name) return -1;
+});
+console.log(sortedPeople3);
 
 
 // this should console log the following:
@@ -509,14 +509,13 @@ const people3 = [
   }
 
   // Or in a single line //
+    const doubleSwap = (string, charA, charB) => [...string].map((e) => (e === charA ? charB : e === charB ? charA : e)).join("");
 
-    // const doubleSwap = (string, charA, charB) => [...string].map((e) => (e === charA ? charB : e === charB ? charA : e)).join("");
-
-  // console.log(doubleSwap("this is a string", "i", "s"));
-  // console.log(doubleSwap("m#ybe #nother #ppro#ch is necess#ry", "#", "a"));
-  // console.log(doubleSwap("what is the point of this?", "o", "t"));
-  // console.log(doubleSwap("CghJh%!&hu78UHb(gb!hdsl#dakgf!dal!", "g", "!"));
-  // console.log(doubleSwap("let's do one last test", "l", "e"));
+  console.log(doubleSwap("this is a string", "i", "s"));
+  console.log(doubleSwap("m#ybe #nother #ppro#ch is necess#ry", "#", "a"));
+  console.log(doubleSwap("what is the point of this?", "o", "t"));
+  console.log(doubleSwap("CghJh%!&hu78UHb(gb!hdsl#dakgf!dal!", "g", "!"));
+  console.log(doubleSwap("let's do one last test", "l", "e"));
 
 //  this should log the following:
 
